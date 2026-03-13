@@ -127,22 +127,73 @@ Before submitting, verify:
 
 ## Your Information
 
-**Name:** [Your Name]
-**Student ID:** [Your Student ID]
-**Design Theme:** [Describe your portfolio theme/style]
+**Name:** Mapalo Kanyanta
+**Student ID:** 2022063457
+**Design Theme:** Modern, minimalist portfolio with dark mode support
 
 ### CSS Techniques Used
-- [ ] CSS Custom Properties
-- [ ] Flexbox
-- [ ] CSS Grid
-- [ ] Media Queries
-- [ ] Other: _______________
+- [x] CSS Custom Properties
+- [x] Flexbox
+- [x] CSS Grid
+- [x] Media Queries
+- [x] Dark/Light Mode Toggle (CSS + JavaScript)
+- [x] CSS Animations/Transitions
+- [x] CSS-only Hamburger Menu
+- [x] Print Stylesheet
+
+### Features Implemented
+
+#### Core Requirements
+- Semantic HTML5 structure with proper elements (header, nav, main, sections, footer)
+- Professional, responsive design with mobile-first approach
+- 3+ breakpoints (mobile, tablet, desktop)
+- CSS Variables for consistent theming
+- Flexbox used for navigation, hero section, and footer layouts
+- CSS Grid used for project cards, services, and about sections
+- Form with validation attributes
+- Accessibility features (skip link, ARIA labels, alt text)
+
+#### Bonus Features
+1. **Dark Mode Toggle** (+3%)
+   - Toggle button in header with sun/moon icons
+   - Respects system color scheme preference on first visit
+   - Preference saved in localStorage for persistence
+   - Comprehensive dark mode styling for all components
+
+2. **CSS Animations & Transitions** (+3%)
+   - Fade-in animations on page load
+   - Smooth hover effects on buttons and cards
+   - Transition effects on all interactive elements
+
+3. **CSS-only Hamburger Menu** (+2%)
+   - Responsive navigation menu
+   - No JavaScript required for toggle functionality
+   - Smooth transitions on mobile devices
+
+4. **Print Stylesheet** (+2%)
+   - Optimized print layout
+   - Hides non-essential elements (buttons, navigation)
+   - Clean, printer-friendly styling
 
 ### Challenges & Solutions
-[Describe any challenges you faced and how you solved them]
+
+1. **Dark Mode Implementation**
+   - Challenge: Ensuring all text and backgrounds have proper contrast in both light and dark modes
+   - Solution: Created comprehensive CSS custom properties for dark mode, applied scoped selectors to `html.dark-mode` class
+
+2. **Responsive Design**
+   - Challenge: Making layout work across all device sizes without frameworks
+   - Solution: Mobile-first approach with CSS Grid and Flexbox, media queries for breakpoints
+
+3. **Form Styling in Dark Mode**
+   - Challenge: Making form inputs visible and usable in dark mode
+   - Solution: Added specific dark mode styles for inputs, textareas, and focus states with proper color contrast
 
 ### Credits
-[List any images, fonts, or resources used with attribution]
+- Google Fonts: Inter (for body text) and Space Grotesk (for headings)
+- Icons: SVG icons for dark mode toggle, hamburger menu, and social links
+- Responsive Design Inspiration: Modern portfolio best practices
+- All images: Personal portfolio images
 
 ---
 

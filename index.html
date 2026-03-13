@@ -1,261 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="keywords" content="Portfolio, Mapalo Kanyanta, Full-Stack Developer">
+    <title>Mapalo Kanyanta · Full-Stack Developer</title>
+    <!-- External stylesheet only -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
-
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
-            <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+    <!-- Semantic header with navigation -->
+    <header class="page-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">MK<span>.</span></a>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+            <!-- CSS-only hamburger menu (bonus) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Dark mode toggle button -->
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
-                <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
-                </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+    <main id="main-content">
+        <!-- HERO / HOME Section -->
+        <section id="home" class="section hero">
+            <div class="container hero-grid"> <!-- CSS Grid used -->
+                <div class="hero-content">
+                    <p class="hero-greeting">Hi there, I'm</p>
+                    <h1>Mapalo Kanyanta</h1>
+                    <p class="hero-tagline">Full-Stack Developer & AI Enthusiast</p>
+                    <p class="hero-brief">Computer Science student at the University of Zambia, building impactful
+                        solutions with Flutter, Firebase, and AI.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+
+                    <!-- Quick info flexbox -->
+                    <div class="quick-info"> <!-- Flexbox used -->
+                        <div class="info-item">
+                            <span class="info-label">📍</span> Lusaka, Zambia
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📧</span> mapalokanyanta1@gmail.com
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📱</span> +260 765 237 189
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/devKanyanta" class="github-link" target="_blank" rel="noopener">View My
+                        GitHub →</a>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="images/profile.jpg" alt="Mapalo Kanyanta - Full-Stack Developer profile portrait"
+                            class="profile-img">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
+        <!-- ABOUT Section -->
+        <section id="about" class="section about">
             <div class="container">
-                <h2>About Me</h2>
-                <div class="about__content">
-                    <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
-                    </div>
-                    <div class="about__text">
-                        <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                <div class="section-header">
+                    <h4 class="section-subtitle">ABOUT ME</h4>
+                    <h2 class="section-title">Passionate <span>Developer</span> & Problem Solver</h2>
+                    <span class="section-border"></span>
+                </div>
+
+                <div class="about-grid"> <!-- CSS Grid used -->
+                    <div class="about-content">
+                        <p>I'm a Computer Science student at the University of Zambia, tech enthusiast, and developer
+                            passionate about building impactful solutions and user-centric applications. With a focus on
+                            mobile app development, I'm experienced in <strong>Flutter and Firebase</strong> for both
+                            mobile and web, and I've built MVPs in AI tutoring and fintech.</p>
+
+                        <p>I also have backend experience with <strong>Node.js and MySQL</strong> and enjoy creating
+                            RESTful APIs. Currently, I'm working on <strong>Kafundisha</strong>, an AI-powered tutor app
+                            that helps students learn interactively through personalized content and structured courses.
                         </p>
-                        <h3>Skills</h3>
-                        <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
-                            <!-- Add more skills -->
-                        </ul>
+
+                        <p>I'm always exploring new business ideas in tech and looking to build solutions for everyday
+                            needs. As a gamer at heart, I enjoy diving into coding challenges in my spare time.</p>
+
+                        <!-- Skills list -->
+                        <div class="skills-container">
+                            <h3>Technical Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Languages</h4>
+                                    <ul class="skills-list">
+                                        <li>Python</li>
+                                        <li>Java</li>
+                                        <li>Dart</li>
+                                        <li>JavaScript</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Frameworks</h4>
+                                    <ul class="skills-list">
+                                        <li>Flutter</li>
+                                        <li>Node.js</li>
+                                        <li>Firebase</li>
+                                        <li>Laravel</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>AI/ML</h4>
+                                    <ul class="skills-list">
+                                        <li>Google Gemini</li>
+                                        <li>OpenAI API</li>
+                                        <li>11labs API</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Other</h4>
+                                    <ul class="skills-list">
+                                        <li>REST APIs</li>
+                                        <li>Database Design</li>
+                                        <li>Linux OS</li>
+                                        <li>Shell Scripting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🎓</div>
+                            <h4>Education</h4>
+                            <p>Computer Science Student<br>University of Zambia</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">💼</div>
+                            <h4>Experience</h4>
+                            <p>3+ Years<br>Full-Stack Development</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🚀</div>
+                            <h4>Projects</h4>
+                            <p>10+ Completed<br>MVPs & Applications</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🎮</div>
+                            <h4>Fun Fact</h4>
+                            <p>Gamer at heart<br>Love coding challenges</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
+        <!-- PROJECTS Section -->
+        <section id="projects" class="section projects">
             <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects__grid">
-                    <!-- Project Card 1 -->
+                <div class="section-header">
+                    <h4 class="section-subtitle">MY WORK</h4>
+                    <h2 class="section-title">Featured <span>Projects</span></h2>
+                    <span class="section-border"></span>
+                </div>
+
+                <div class="project-grid"> <!-- CSS Grid used -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
-                        <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                        <div class="card-content">
+                            <h3>Lernopia</h3>
+                            <p class="card-tech">NEXTJS · NODEJS · Gemini AI</p>
+                            <p class="card-desc">Lernopia is an AI-powered study productivity web
+                                application designed to help students learn faster and
+                                smarter by automatically converting notes into
+                                interactive flashcards and quizzes.</p>
+                            <div class="card-links">
+                                <a href="https://github.com/devKanyanta/sambilila.git" class="card-link">GitHub →</a>
+                                <a href="https://sambilila.netlify.app/" class="card-link" target="_blank">Live Demo
+                                    →</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project Card 2 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
-                        <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
+                        <div class="card-content">
+                            <h3>Kafundisha AI Tutor</h3>
+                            <p class="card-tech">Flutter · Firebase · Gemini AI</p>
+                            <p class="card-desc">AI-powered tutor app delivering interactive, personalized learning
+                                experiences with structured courses and real-time assistance.</p>
                         </div>
                     </article>
 
-                    <!-- Project Card 3 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
-                        <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
+                        <div class="card-content">
+                            <h3>MDM Waste Management</h3>
+                            <p class="card-tech">Android · Java · Firebase</p>
+                            <p class="card-desc">App connecting waste management company with customers, simplifying
+                                orders and payments in Kitwe, Zambia.</p>
                         </div>
                     </article>
 
-                    <!-- TODO: Add more project cards if desired -->
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3>DESAC Movie Streaming</h3>
+                            <p class="card-tech">Flutter · Node.js · MongoDB</p>
+                            <p class="card-desc">Feature-rich movie streaming app handling end-to-end development from
+                                concept to deployment with robust functionality.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3>SmileFin Fintech MVP</h3>
+                            <p class="card-tech">Flutter · Firebase · REST APIs</p>
+                            <p class="card-desc">Pioneering MVP app for fintech startup with cutting-edge technologies,
+                                focusing on user-centric financial solutions.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
+        <!-- SERVICES Section -->
+        <section id="services" class="section services">
             <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                <div class="section-header">
+                    <h4 class="section-subtitle">WHAT I DO</h4>
+                    <h2 class="section-title">My <span>Services</span></h2>
+                    <span class="section-border"></span>
+                </div>
+
+                <div class="services-grid"> <!-- CSS Grid used -->
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <h3>Mobile App Development</h3>
+                        <p>Android apps that are both simple and complex. I develop my apps to the best so I can deliver
+                            the best to my clients.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
+
+                    <div class="service-item">
+                        <div class="service-icon">🎨</div>
+                        <h3>App Design</h3>
+                        <p>I design very beautiful mobile app layouts for all screen variants with focus on user
+                            experience.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
+
+                    <div class="service-item">
+                        <div class="service-icon">💻</div>
+                        <h3>Web Design</h3>
+                        <p>I design simple single-paged websites with responsive layouts and modern aesthetics.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
+
+                    <div class="service-item">
+                        <div class="service-icon">🖥️</div>
+                        <h3>Desktop Apps</h3>
+                        <p>I develop simple and complex apps for Windows and Linux operating systems.</p>
                     </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE Timeline -->
+        <section id="experience" class="section experience">
+            <div class="container">
+                <div class="section-header">
+                    <h4 class="section-subtitle">MY JOURNEY</h4>
+                    <h2 class="section-title">Work <span>Experience</span></h2>
+                    <span class="section-border"></span>
+                </div>
+
+                <div class="timeline"> <!-- Flexbox used for timeline -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>MDM Waste Management</h3>
+                            <p class="timeline-role">Mobile App Developer</p>
+                            <p>Developed an Android app for MDM WASTE MANAGEMENT in Kitwe to connect the company with
+                                customers, simplifying orders and payments.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021-2022</div>
+                        <div class="timeline-content">
+                            <h3>DESAC</h3>
+                            <p class="timeline-role">Full-Stack Mobile App Developer</p>
+                            <p>Led development of feature-rich movie streaming app from conceptualization to deployment.
+                                Collaborated with cross-functional teams to integrate user feedback.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020-2021</div>
+                        <div class="timeline-content">
+                            <h3>SmileFin</h3>
+                            <p class="timeline-role">Mobile App Developer</p>
+                            <p>Contributed to pioneering MVP app for fintech startup, playing key role in conception,
+                                design, and implementation phases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header">
+                    <h4 class="section-subtitle">CONTACT</h4>
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
+                    <span class="section-border"></span>
+                </div>
+
+                <div class="contact-grid"> <!-- CSS Grid used -->
+                    <div class="contact-info">
+                        <h3>Let's work together</h3>
+                        <p>I'm currently available for freelance or full-time opportunities. Send me a message and I'll
+                            get back to you within 48 hours.</p>
+
+                        <div class="info-cards"> <!-- Flexbox used -->
+                            <div class="info-card">
+                                <span class="info-emoji">📧</span>
+                                <h4>Email</h4>
+                                <a href="mailto:mapalokanyanta1@gmail.com">mapalokanyanta1@gmail.com</a>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-emoji">📱</span>
+                                <h4>Phone</h4>
+                                <a href="tel:+260765237189">+260 765 237 189</a>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-emoji">📍</span>
+                                <h4>Address</h4>
+                                <p>Lusaka, Zambia</p>
+                            </div>
+
+                            <div class="info-card">
+                                <span class="info-emoji">🔗</span>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/devKanyanta" target="_blank">github.com/devKanyanta</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form action="#" method="post" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="Name" placeholder="Mapalo Kanyanta" required
+                                    minlength="2">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="Email" placeholder="mapalo@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Mobile Number</label>
+                                <input type="tel" id="phone" name="Mobile number" placeholder="+260 765 237 189">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="Message" rows="5"
+                                    placeholder="Tell me about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
+    <!-- FOOTER -->
+    <footer class="page-footer">
         <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-            </nav>
+            <div class="footer-content"> <!-- Flexbox used -->
+                <div class="footer-logo">
+                    <a href="#home"><img src="images/profile.jpg" alt="Mapalo Kanyanta Logo"></a>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.x.com/RahmKanyanta">X</a>
+                    <a href="https://www.linkedin.com/in/mapalo-kanyanta-840553240/">LinkedIn</a>
+                    <a href="https://github.com/devKanyanta">GitHub</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mapalo Kanyanta · Computer Science Student, University of Zambia. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#home" class="scroll-top" aria-label="Scroll to top">↑</a>
+
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+        const storageKey = 'darkModeEnabled';
+
+        // Check for saved dark mode preference or system preference
+        function initializeDarkMode() {
+            const savedPreference = localStorage.getItem(storageKey);
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDarkMode = savedPreference !== null ? JSON.parse(savedPreference) : prefersDark;
+
+            if (isDarkMode) {
+                htmlElement.classList.add('dark-mode');
+            }
+        }
+
+        // Initialize dark mode on page load
+        initializeDarkMode();
+
+        // Toggle dark mode on button click
+        darkModeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark-mode');
+            const isDarkMode = htmlElement.classList.contains('dark-mode');
+            localStorage.setItem(storageKey, JSON.stringify(isDarkMode));
+        });
+    </script>
 </body>
+
 </html>
